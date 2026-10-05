@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jussend</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <div class="brand"><span class="mark">J</span><span>Jussend</span></div>
+  <div class="header-actions">
+    <span id="connection" class="status">Checking…</span>
+    <button class="secondary" onclick="connectGmail()">Connect Gmail</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div>
+      <div class="eyebrow">AI EMAIL ASSISTANT</div>
+      <h1>Reply to what matters.<br><span>Keep control.</span></h1>
+      <p>Jussend finds conversations that need a response, drafts the reply, and puts you in control before anything is saved to Gmail.</p>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-label">Approval-first</div>
+      <strong>Nothing gets sent.</strong>
+      <span>Approved replies become Gmail drafts.</span>
+    </div>
+  </section>
+
+  <section class="toolbar">
+    <div>
+      <h2>Draft inbox</h2>
+      <p id="scanInfo">Review proposed replies below.</p>
+    </div>
+    <div class="toolbar-actions">
+      <button class="secondary" onclick="scan()">Scan inbox</button>
+      <label class="toggle">
+        <input id="scheduler" type="checkbox" onchange="toggleScheduler(this.checked)">
+        <span></span>
+        Recurring scan
+      </label>
+    </div>
+  </section>
+
+  <section id="drafts" class="drafts"></section>
+</main>
+
+<div id="toast" class="toast"></div>
+<script src="/static/app.js"></script>
+</body>
+</html>
